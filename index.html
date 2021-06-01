@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de IMC </title>
+</head>
+<style>
+    div {
+        border: 10px inset lightgray;
+
+    }
+</style>
+
+<body>
+    <h1>Calculadora de IMC</h1>
+    <h2>teste aqui como fazer </h2>
+
+    <form onclick="event.preventDefault()">
+        <label for="texto-do-peso">digite o seu peso aqui (em kgs)</label>
+        <input id="texto-do-peso" type="number">
+        <label for="texto-da-altura">digite o seu tamanho (altura) aqui (em metros)</label>
+        <input id="texto-da-altura">
+        <button onclick="calculaImc()">calcule o seu IMC</button>
+    </form>
+
+
+    <br>
+    <br>
+    <br>
+
+    <form onclick="event.preventDefault()">
+        <button onclick="hello()">peepeedudukaka</button>
+        <button onclick="kapa()">banana</button>
+        <button onclick="pepe()">informações</button>
+    </form>
+
+
+    <div id="resposta1"></div>
+    <div id="resposta2"></div>
+    <div id="resposta3"></div>
+
+
+</body>
+<script>
+
+    let peso = 70;
+    let altura = 1.70;
+    console.log("seu peso é igual a ", peso);
+    console.log("sua altura é igua a ", altura);
+
+    let imc = peso / (altura * altura);
+    console.log("seu imc é igual a", imc.toFixed(1))
+
+
+    function kapa() {
+        document.getElementById("resposta2").innerHTML += "<p> OPANGANGANSTILE </p>"
+    }
+
+    function hello() {
+        document.getElementById("resposta1").innerHTML += "<p>dance até morre o ye oye oey oeyeyeyey </p>"
+    }
+
+    function pepe() {
+        document.getElementById("resposta3").innerHTML += "<p> memes are fun don't laught </p>"
+    }
+
+</script>
+
+</html>

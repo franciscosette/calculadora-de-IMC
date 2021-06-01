@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de IMC </title>
+</head>
+<style>
+    div {
+
+        background-color: rgb(24, 151, 24);
+        opacity: 0.3;
+
+    }
+
+    div {
+        border: 10px inset lightgray;
+
+    }
+
+    h1 {
+        text-shadow: 1px 1px 2.5px purple;
+    }
+
+    p {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+    }
+
+    h1 {
+        text-decoration: overline;
+    }
+
+    .p1 {
+        font-family: "fantasy", Times, red serif;
+    }
+</style>
+
+<body>
+
+
+
+    <h1>Calculadora de IMC</h1>
+    <h2>Teste aqui como fazer </h2>
+
+    <form onclick="event.preventDefault()">
+        <label for="texto-do-peso">digite o seu peso aqui (em kgs)</label>
+        <input id="texto-do-peso" type="number" required>
+        <br />
+        <label for="texto-da-altura">digite o seu tamanho (altura) aqui (em metros)</label>
+        <input id="texto-da-altura" type="number" required>
+        <button onclick="calculaImc()">calcule o seu IMC</button>
+
+    </form>
+
+    <h2 id="calculaImc"></h2>
+    <h2 id="resultado-do-Imc"></h2>
+
+    <h2 id="resposta"></h2>
+
+
+
+</body>
+<script>
+
+    const calculaImc = () => {
+
+
+        let peso = document.getElementById("texto-do-peso").value;
+        let altura = document.getElementById("texto-da-altura").value;
+        if (peso && altura) {
+            console.log("seu peso é igual a ", peso);
+            console.log("sua altura é igua a ", altura);
+
+            let imc = peso / (altura * altura);
+            console.log("seu imc é igual a", imc.toFixed(1));
+
+            document.getElementById("resultado-do-Imc").innerText = "Seu IMC é igual á " + imc.toFixed(1);
+            if (imc < 18.5) {
+                document.getElementById("resposta").innerText = "você esta abaixo da sua média demais, melhore sua dieta!";
+                console.log("você esta abaixo da sua média demais, melhore sua dieta!")
+            }
+            else if (imc < 24.9) {
+                document.getElementById("resposta").innerText = "você esta com o peso certo, continue asism!";
+                console.log("você esta com o peso certo, continue asism!")
+            }
+            else if (imc < 29.9) {
+                document.getElementById("resposta").innerText = "você esta com o peso acima da média, tome cuidado!";
+                console.log("você esta com o peso acima da média, tome cuidado!")
+
+            }
+            else if (imc < 34.9) {
+                document.getElementById("resposta").innerText = "cuidado, você esta com obesidade grau 1, e isso não é bom. Emagreça!";
+                console.log("cuidado, você esta com obesidade grau 1, e isso não é bom. Emagreça!")
+
+            } else if (imc < 39.9) {
+                document.getElementById("resposta").innerText = "estamos com problemas, você esta com obesidade grau 2, emagreça rápido ou haverá consequencias";
+                comsole.log("estamos com problemas, você esta com obesidade grau 2, emagreça rápido ou haverá consequencias")
+
+            } else if (imc > 40.0) {
+                document.getElementById("resposta").innerText = "ATENÇÃO, VOCÊ ESTA COM OBESIDADE DE GRAU 3, VOCÊ PRECISA URGENTEMENTE DE ENTRAR EM CONTATO COM UM MÉDICO E DIMINUIR A SUA MASSA CORPORAL";
+                console.log("ATENÇÃO, VOCÊ ESTA COM OBESIDADE DE GRAU 3, VOCÊ PRECISA URGENTEMENTE DE ENTRAR EM CONTATO COM UM MÉDICO E DIMINUIR A SUA MASSA CORPORAL")
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+        } else {
+            document.getElementById("resultado-do-Imc").innerText = "Escreva um número válido";
+        }
+    }
+</script>
+
+</html>
