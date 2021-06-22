@@ -1,38 +1,92 @@
+  * {
+      margin: 0px;
+      /*border: 2px dashed red;*/
+      padding: 0px;
+  }
 
-    div {
+  nav {
+      position: fixed;
+      background-color: rgb(96, 96, 161);
+      margin: 0;
+      padding: 0;
+      width: 20%;
+      float: left;
+  }
 
-        background-color: rgb(24, 151, 24);
-        opacity: 0.3;
+  main {
+      margin-left: 23%;
+  }
 
-    }
+  body {
+      background-color: violet;
+  }
 
-    div {
-        border: 10px inset rgb(212, 7, 7);
+  div {
+      background-color: rgb(24, 151, 24);
+      opacity: 0.3;
+  }
 
-    }
+  div {
+      border: 10px inset rgb(212, 7, 7);
+  }
 
-    h1 {
-        text-shadow: 1px 1px 2.5px rgba(230, 69, 230, 0.692);
-    }
+  h1 {
+      text-shadow: 1px 1px 2.5px rgba(230, 69, 230, 0.692);
+  }
 
-    p {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        margin-right: 150px;
-        margin-left: 80px;
-    }
+  p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 15px;
+      margin-left: 8px;
+  }
 
-    h1 {
-        text-decoration: overline;
-    }
+  h1 {
+      text-decoration: overline;
+  }
 
-    .p1 {
-        font-family: "fantasy", Times, red serif;
-    }
-    nav {
-        position:fixed;
-        background-color:blue; 
-        margin:0;
-        padding: 0;
-        width:100%
-    }
+  .p1 {
+      font-family: "fantasy", Times, red serif;
+  }
+
+  ul {
+      list-style-type: none;
+  }
+
+  li {
+      padding: 20px;
+      color: white;
+  }
+
+  li a:link {
+      text-decoration: none;
+      color: white;
+  }
+
+  li a:visited {
+      text-decoration: none;
+      color: white;
+  }
+
+  li a:hover {
+      text-decoration: none;
+      color: yellow;
+  }
+
+  li a:active {
+      color: white;
+      text-decoration: underline;
+  }
+
+  @media (min-width:600px) {
+      body {
+          background-color: tomato;
+      }
+      nav {
+          width: 0px;
+          overflow: hidden
+      }
+      main {
+          margin: 20px;
+      }
+  }
